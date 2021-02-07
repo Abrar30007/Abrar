@@ -1,0 +1,48 @@
+<html>
+<head>
+	
+</head>
+<body>
+
+<h1> Calculator </h1>
+
+<label for="num1"> Number 1 </label>
+<br>
+<input type="text" id="num1" placeholder="enter first Number">
+<br>
+<br>
+<label for="num2"> Number 2 </label>
+<br>
+<input type="text" id="num2" placeholder="enter second Number">
+
+<select id="option">
+	<option value="+"> Addition (+)</option>
+	<option value="-"> Subtraction (-)</option>
+	<option value="*"> Multiplication (*)</option>
+	<option value="/"> Division (/)</option>
+</select>
+<br>
+<button onclick="Calculate()"> Calculate </button>
+<h1> Result is : </h1>
+<h1 id="Result"></h1>
+
+<script>
+	
+function Calculate()
+{
+	var num1 = Number (document.getElementById("num1").value)
+var num2 = Number (document.getElementById("num2").value)
+var option = document.getElementById("option").value
+var Result ;
+
+	if (option == "+") { Result = num1 + num2}
+		if (option == "-") { Result = num1 - num2}
+			if (option == "*") { Result = num1 * num2}
+				if (option == "/") { Result = num1 / num2}
+
+					document.getElementById("Result").innerHTML = Result ;
+}
+</script>
+
+</body>
+</html>
